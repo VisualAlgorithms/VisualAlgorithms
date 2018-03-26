@@ -1,20 +1,18 @@
 // TODO: implement methods
 class LinkedList {
     constructor() {
-        // create dummy node with null data and pointers to itself
-        this.head = new Node(null);
-        this.head.next = this.head;
-        this.head.prev = this.head;
-
-        this.size = 0;
+        // create dummy node (with null data and pointers to itself)
+        this._dummy = new Node(null);
+        this._size = 0;
     }
 
-    test() {
-        let n = new Node('test');
-    }
-
-    // TODO: implement
+    // Adds a node at the end of the list
     add(object) {
+        const node = new Node(object, this._dummy, this._dummy.prev);
+        this._dummy.prev = node;
+        ++this._size;
+        if (this._size === 1)
+            this._dummy.next = node;
         return true;
     }
 
@@ -80,8 +78,8 @@ class LinkedList {
     }
 
     // TODO: implement
-    size() {
-        return 0;
+    get size() {
+        return this._size;
     }
 
     // TODO: implement
@@ -94,8 +92,15 @@ class LinkedList {
 class Node {
     constructor(data, next, prev) {
         this.data = data;
-        this.next = next;
-        this.prev = prev;
-        console.log('new node created');
+
+        if (next === undefined && prev === undefined) {
+            this.next = this;
+            this.prev = this;
+        } else if (next === undefined || prev === undefined) {
+            throw new Error('Node must point to next and prev Nodes');
+        } else {
+            this.next = next;
+            this.prev = prev;
+        }
     }
 }
