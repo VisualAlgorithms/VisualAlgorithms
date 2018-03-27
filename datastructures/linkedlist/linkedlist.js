@@ -8,12 +8,15 @@ class LinkedList {
         this._size = 0;
     }
 
-    // Adds a node at the end of the list
-    add(object) {
-        const node = new Node(object, this._dummy, this._dummy.prev);
-        this._dummy.prev.next = node;
-        this._dummy.prev = node;
+    // Adds a node containing 'obj' to the end of the list
+    add(obj) {
+        const d = this._dummy;
+        const n = new Node(obj, d, d.prev);
+
+        d.prev.next = n;
+        d.prev = n;
         ++this._size;
+
         return true;
     }
 
@@ -90,11 +93,11 @@ class LinkedList {
     }
 
     // Removes the element containing object, and returns true if successful, false if object was not found.
-    remove(object) {
+    remove(obj) {
         let n = this._dummy.next;
 
         while (n !== this._dummy) {
-            if (n.data === object) {
+            if (n.data === obj) {
                 n.next.prev = n.prev;
                 n.prev.next = n.next;
                 --this._size;
