@@ -9,10 +9,9 @@ class LinkedList {
     // Adds a node at the end of the list
     add(object) {
         const node = new Node(object, this._dummy, this._dummy.prev);
+        this._dummy.prev.next = node;
         this._dummy.prev = node;
         ++this._size;
-        if (this._size === 1)
-            this._dummy.next = node;
         return true;
     }
 
@@ -31,15 +30,22 @@ class LinkedList {
         return new LinkedList();
     }
 
-    // TODO: implement
+    // return first element without removing
     peek() {
-        // first element
-        return new Object();
+        return this.get(0);
     }
 
-    // TODO: implement
+    // returns element at index without removing
     get(index) {
-        return new Object();
+        if (index > this._size - 1)
+            throw new Error('Invalid index');
+
+        let n = this._dummy.next;
+
+        for (let i = 0; i < index; ++i)
+            n = n.next;
+
+        return n.data;
     }
 
     // TODO: implement
@@ -47,24 +53,46 @@ class LinkedList {
         return object;
     }
 
-    // TODO: implement
+    // Returns the index of the first occurence of object in the list
     indexOf(object) {
-        return 0;
+        let n = this._dummy.next;
+        let index = 0;
+
+        while (n !== this._dummy) {
+            if (n.data === object)
+                return index;
+            ++index;
+            n = n.next;
+        }
+
+        return -1;
     }
 
-    // TODO: implement
+    // Returns true if object is in the list
     contains(object) {
-        return true;
+        return this.indexOf(object) !== -1;
     }
 
-    // TODO: implement
+    // Returns true if there are no elements in the list
     isEmpty() {
-        return true;
+        return this._size === 0;
     }
 
     // TODO: implement
     remove(object) {
-        return true;
+        let n = this._dummy.next;
+
+        while (n !== this._dummy) {
+            if (n.data === object) {
+                n.next.prev = n.prev;
+                n.prev.next = n.next;
+                --this._size;
+                return true;
+            }
+            n = n.next;
+        }
+
+        return false;
     }
 
     // TODO: implement
