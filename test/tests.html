@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="../index.html">VisualAlgorithms</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../datastructures/linkedlist/linkedlist.html">Linked List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./tests.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="mocha"></div>
+    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+    <script src="http://chaijs.com/chai.js"></script>
+    <script>mocha.setup({ ui: 'bdd' })</script>
+    <script src="../datastructures/linkedlist/linkedlist.js"></script>
+    <script src="linkedlist.test.js"></script>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+
+        // Fix mocha graphics
+        document.querySelector('#mocha-stats').style.marginTop = '50px';
+        document.querySelector('#mocha-stats').style.padding = '30px';
+        document.querySelector('.progress').style.display = 'none';
+    </script>
+</body>
+
+</html>
