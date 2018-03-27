@@ -1,7 +1,9 @@
-// TODO: implement methods
+// TODO: implement clone(), set(), removeAll(), and retainAll()
+
+// Circular doubly-linked exogenous list with a dummy Node
 class LinkedList {
     constructor() {
-        // create dummy node (with null data and pointers to itself)
+        // Dummy Node has null data and prev / next pointers that point to itself
         this._dummy = new Node(null);
         this._size = 0;
     }
@@ -15,14 +17,23 @@ class LinkedList {
         return true;
     }
 
-    // TODO: implement
+    // Appends all of the elements in linkedList to the end of this list
     addAll(linkedList) {
+        let n = linkedList._dummy.next;
+
+        while (n !== linkedList._dummy) {
+            this.add(n.data);
+            n = n.next;
+        }
+
         return true;
     }
 
-    // TODO: implement
+    // Removes all elements from the list, returning it to the initial state.
     clear() {
-
+        this._dummy.next = this._dummy;
+        this._dummy.prev = this._dummy;
+        this._size = 0;
     }
 
     // TODO: implement
@@ -30,12 +41,12 @@ class LinkedList {
         return new LinkedList();
     }
 
-    // return first element without removing
+    // Return first element without removing
     peek() {
         return this.get(0);
     }
 
-    // returns element at index without removing
+    // Returns element at index without removing
     get(index) {
         if (index > this._size - 1)
             throw new Error('Invalid index');
@@ -78,7 +89,7 @@ class LinkedList {
         return this._size === 0;
     }
 
-    // TODO: implement
+    // Removes the element containing object, and returns true if successful, false if object was not found.
     remove(object) {
         let n = this._dummy.next;
 
@@ -105,18 +116,25 @@ class LinkedList {
         return true;
     }
 
-    // TODO: implement
-    get size() {
+    // Returns the number of elements in the list
+    size() {
         return this._size;
     }
 
-    // TODO: implement
+    // Returns an array with elements equal to those in the list in the same order.
     toArray() {
-        return [];
+        let arr = [];
+        let n = this._dummy.next;
+
+        while (n !== this._dummy) {
+            arr.push(n.data);
+            n = n.next;
+        }
+
+        return arr;
     }
 }
 
-// TODO: implement
 class Node {
     constructor(data, next, prev) {
         this.data = data;

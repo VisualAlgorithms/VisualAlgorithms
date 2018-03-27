@@ -1,3 +1,5 @@
+const { expect } = chai;
+
 describe('Linked List', function () {
     describe('constructor', function () {
         let ll;
@@ -5,9 +7,11 @@ describe('Linked List', function () {
             ll = new LinkedList();
         });
 
-        it('should have head that points to itself', () => {
+        it('should have a head that points to itself', () => {
             expect(ll._dummy.next).to.equal(ll._dummy);
             expect(ll._dummy.prev).to.equal(ll._dummy);
+            expect(ll._dummy.next.next).to.equal(ll._dummy);
+            expect(ll._dummy.prev.prev).to.equal(ll._dummy);
         });
     });
 
@@ -21,18 +25,18 @@ describe('Linked List', function () {
             ll.add(5);
         });
 
-        it('should add null with out crashing', () => {
+        it('should add null without crashing', () => {
             ll.add(null);
         });
 
         it('should have a size of one', () => {
             ll.add(5);
-            expect(ll.size).to.equal(1);
+            chai.expect(ll.size()).to.equal(1);
         });
 
         it('should put added element in list, at the end', () => {
             ll.add(5);
-            expect(ll._dummy.prev.data).to.equal(5);
+            chai.expect(ll._dummy.prev.data).to.equal(5);
         });
 
         it('should add 2 elements', () => {
@@ -105,15 +109,15 @@ describe('Linked List', function () {
         });
 
         it('should contain elements in list', () => {
-            expect(ll.contains(5)).to.be(true);
-            expect(ll.contains(4)).to.be(true);
-            expect(ll.contains(6)).to.be(true);
-            expect(ll.contains(9)).to.be(true);
+            expect(ll.contains(5)).to.equal(true);
+            expect(ll.contains(4)).to.equal(true);
+            expect(ll.contains(6)).to.equal(true);
+            expect(ll.contains(9)).to.equal(true);
         });
 
         it('should NOT contain elements not in list', () => {
-            expect(ll.contains(11)).to.be(false);
-            expect(ll.contains(null)).to.be(false);
+            expect(ll.contains(11)).to.equal(false);
+            expect(ll.contains(null)).to.equal(false);
         });
     });
 
@@ -124,18 +128,18 @@ describe('Linked List', function () {
         });
 
         it('should be empty after instantiating', () => {
-            expect(ll.isEmpty()).to.be(true);
+            expect(ll.isEmpty()).to.equal(true);
         });
 
         it('should NOT be empty after adding', () => {
             ll.add('hello');
-            expect(ll.isEmpty()).to.be(false);
+            expect(ll.isEmpty()).to.equal(false);
         });
 
         it('should be empty after removing the last element', () => {
             ll.add('hello');
             ll.remove('hello');
-            expect(ll.isEmpty()).to.be(true);
+            expect(ll.isEmpty()).to.equal(true);
         });
     });
 
@@ -149,22 +153,148 @@ describe('Linked List', function () {
         });
 
         it('should remove an element that was in the list', () => {
-            expect(ll.remove(-3)).to.be(true);
+            expect(ll.remove(-3)).to.equal(true);
         });
 
         it('should NOT remove an element that is NOT in the list', () => {
-            expect(ll.remove(-9)).to.be(false);
+            expect(ll.remove(-9)).to.equal(false);
         });
     });
+
+    describe('toArray', () => {
+        let ll;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(-5);
+            ll.add(6);
+        });
+
+        it('should create an array', () => {
+            expect(ll.toArray()).to.be.an('array');
+        });
+
+        it('should have as many elements as the list', () => {
+            expect(ll.toArray()).to.have.lengthOf(5);
+        });
+
+        it('should have the correct elements in correct order', () => {
+            expect(ll.toArray()).to.have.ordered.members([5, 0, null, -5, 6]);
+        });
+    });
+
+    describe('clear', () => {
+        let ll;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(-5);
+            ll.add(6);
+        });
+
+        it('should be in initial state after clear', () => {
+            ll.clear();
+            expect(ll.isEmpty()).to.equal(true);
+            expect(ll._dummy.next).to.equal(ll._dummy);
+            expect(ll._dummy.prev).to.equal(ll._dummy);
+            expect(ll._dummy.next.next).to.equal(ll._dummy);
+            expect(ll._dummy.prev.prev).to.equal(ll._dummy);
+            expect(ll._dummy.data).to.equal(null);
+        });
+    });
+
+    describe('addAll', () => {
+        let ll;
+        let ll2;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(6);
+
+            ll2 = new LinkedList();
+            ll2.add(6);
+            ll2.add(45);
+            ll2.add(66);
+            ll2.add(-46);
+            ll2.add(6);
+        });
+
+        it('should contain number of elements === both lists number of elements', () => {
+            ll.addAll(ll2);
+            expect(ll.size()).to.equal(9);
+        });
+    });
+
+    describe('clone', () => {
+        let ll;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(6);
+        });
+
+        it('needs to be implemented', () => {
+            expect(true).to.equal(false);
+        });
+    });
+
+    describe('set', () => {
+        let ll;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(6);
+        });
+
+        it('needs to be implemented', () => {
+            chai.expect(true).to.equal(false);
+        });
+    });
+
+    describe('removeAll', () => {
+        let ll;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(6);
+        });
+
+        it('needs to be implemented', () => {
+            chai.expect(true).to.equal(false);
+        });
+    });
+
+    describe('retainAll', () => {
+        let ll;
+        beforeEach(() => {
+            ll = new LinkedList();
+            ll.add(5);
+            ll.add(0);
+            ll.add(null);
+            ll.add(6);
+        });
+
+        it('needs to be implemented', () => {
+            expect(true).to.equal(false);
+        });
+    });
+
 });
 
 describe('Node', function () {
-    it('should point to next and prev Nodes', () => {
-        let head = new Node(null);
-        let n = new Node(5, head, head);
-    })
-
-    it('should throw Error', () => {
+    it('should throw Error if not pointing to prev and next', () => {
         let error;
         let head = new Node(null);
         try {
@@ -173,6 +303,6 @@ describe('Node', function () {
             error = err;
         }
 
-        expect(error).to.not.be(undefined);
+        expect(error, 'node must point to prev and next nodes').to.not.equal(undefined);
     })
 });
