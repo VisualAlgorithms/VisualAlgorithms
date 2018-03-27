@@ -102,8 +102,8 @@ remove(obj) {
         if (n.data === object) {
             n.next.prev = n.prev;
             n.prev.next = n.next;
-                --this._size;
-                return true; 
+            --this._size;
+            return true; 
         }
         
         n = n.next;
