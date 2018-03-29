@@ -2,7 +2,7 @@
 
 This project consists of visual representations of common data structures and algorithms, meant to be used as a learning tool for students / job seekers. Unit tests are also viewable on the live site under the "Test" tab.
 
-See the live site: <https://mrwatts88.github.io/VisualAlgorithms/>
+See the live site: <https://visualalgorithms.github.io/VisualAlgorithms/>
 
 ## Code Details
 
