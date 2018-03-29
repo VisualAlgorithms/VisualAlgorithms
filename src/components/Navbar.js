@@ -25,7 +25,7 @@ export default class Navbar extends React.Component {
                             <Link className="nav-link" to='/linkedlist'>Linked List</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to='/caesarcipher'>Caesar Cipher</Link>
+                            <Link className="nav-link" to='/caesercipher'>Caesar Cipher</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/linkedlist'>Test</Link>
