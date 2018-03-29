@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>main.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(187,181,41); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(106,135,89); }
+.s3 { color: rgb(204,120,50); font-weight: bold; }
+.s4 { color: rgb(204,120,50); }
+.s5 { color: rgb(104,151,187); }
+.s6 { color: rgb(128,128,128); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+main.cpp</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">#include </span><span class="s2">&lt;iostream&gt;</span><span class="s1"> 
+</span><span class="s0">#include </span><span class="s2">&lt;sstream&gt;</span><span class="s1"> 
+</span><span class="s0">#include </span><span class="s2">&lt;fstream&gt;</span><span class="s1"> 
+ 
+</span><span class="s3">using namespace </span><span class="s1">std</span><span class="s4">;</span><span class="s1"> 
+ 
+string encrypt(string text</span><span class="s4">, </span><span class="s3">int </span><span class="s1">s)</span><span class="s4">;</span><span class="s1"> 
+ 
+</span><span class="s3">int </span><span class="s1">main(</span><span class="s3">int </span><span class="s1">carg</span><span class="s4">, </span><span class="s3">char </span><span class="s1">**varg) { 
+    </span><span class="s3">if </span><span class="s1">(carg != </span><span class="s5">4</span><span class="s1">) { 
+        fprintf(stderr</span><span class="s4">, </span><span class="s2">&quot;%s&quot;</span><span class="s4">, </span><span class="s2">&quot;Incorrect Arguments, Try Again.</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+        exit(</span><span class="s5">1</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+    ifstream inputFile</span><span class="s4">;</span><span class="s1"> 
+    string inputString = varg[</span><span class="s5">1</span><span class="s1">]</span><span class="s4">;</span><span class="s1"> 
+    inputFile.open(inputString</span><span class="s4">, </span><span class="s1">ios::in)</span><span class="s4">;</span><span class="s1"> 
+ 
+    </span><span class="s3">if </span><span class="s1">(! inputFile.is_open()) { 
+        fprintf(stderr</span><span class="s4">, </span><span class="s2">&quot;%s&quot;</span><span class="s4">, </span><span class="s2">&quot;Error Opening File.</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+        exit(</span><span class="s5">1</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+    ofstream outputFile</span><span class="s4">;</span><span class="s1"> 
+    string outputString = varg[</span><span class="s5">2</span><span class="s1">]</span><span class="s4">;</span><span class="s1"> 
+    outputFile.open(outputString</span><span class="s4">, </span><span class="s1">ios::out | ios::trunc)</span><span class="s4">;</span><span class="s1"> 
+ 
+    </span><span class="s3">if </span><span class="s1">(! outputFile.is_open()) { 
+        fprintf(stderr</span><span class="s4">, </span><span class="s2">&quot;%s&quot;</span><span class="s4">, </span><span class="s2">&quot;Error Creating Target File.</span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+        exit(</span><span class="s5">1</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+    string sshift = varg[</span><span class="s5">3</span><span class="s1">]</span><span class="s4">;</span><span class="s1"> 
+    stringstream geek(sshift)</span><span class="s4">;</span><span class="s1"> 
+    </span><span class="s3">int </span><span class="s1">shift = </span><span class="s5">0</span><span class="s4">;</span><span class="s1"> 
+    geek &gt;&gt; shift</span><span class="s4">;</span><span class="s1"> 
+ 
+    </span><span class="s3">if </span><span class="s1">(shift &gt; </span><span class="s5">25 </span><span class="s1">|| shift &lt; -</span><span class="s5">25</span><span class="s1">) { 
+        fprintf(stderr</span><span class="s4">, </span><span class="s2">&quot;%s&quot;</span><span class="s4">, </span><span class="s2">&quot;Error With Shift Size. Range must be -25 to 25 </span><span class="s4">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+        exit(</span><span class="s5">1</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+    string character</span><span class="s4">;</span><span class="s1"> 
+ 
+    </span><span class="s3">if </span><span class="s1">(inputFile.is_open() &amp;&amp; outputFile.is_open()) { 
+        </span><span class="s3">while </span><span class="s1">(getline(inputFile</span><span class="s4">, </span><span class="s1">character)) { 
+ 
+            </span><span class="s6">//cout &lt;&lt; character &lt;&lt; endl;</span><span class="s1"> 
+            outputFile &lt;&lt; encrypt(character</span><span class="s4">, </span><span class="s1">shift) &lt;&lt;endl</span><span class="s4">;</span><span class="s1"> 
+        } 
+ 
+        inputFile.close()</span><span class="s4">;</span><span class="s1"> 
+        outputFile.close()</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+ 
+    </span><span class="s3">return </span><span class="s5">0</span><span class="s4">;</span><span class="s1"> 
+} 
+ 
+string encrypt(string text</span><span class="s4">, </span><span class="s3">int </span><span class="s1">s) { 
+    string result = </span><span class="s2">&quot;&quot;</span><span class="s4">;</span><span class="s1"> 
+ 
+    </span><span class="s3">if</span><span class="s1">(s&lt;</span><span class="s5">0</span><span class="s1">) 
+    { 
+        s= (s+</span><span class="s5">26</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s6">// traverse text</span><span class="s1"> 
+    </span><span class="s3">for </span><span class="s1">(</span><span class="s3">int </span><span class="s1">i = </span><span class="s5">0</span><span class="s4">; </span><span class="s1">i &lt; text.length()</span><span class="s4">; </span><span class="s1">i++) { 
+        </span><span class="s6">// apply transformation to each character</span><span class="s1"> 
+        </span><span class="s3">if</span><span class="s1">(isspace(text[i]) || ispunct(text[i])) 
+        { 
+            result += </span><span class="s3">char</span><span class="s1">(</span><span class="s3">int</span><span class="s1">(text[i]))</span><span class="s4">;</span><span class="s1"> 
+        } 
+        </span><span class="s6">// Encrypt Uppercase letters</span><span class="s1"> 
+        </span><span class="s3">else if </span><span class="s1">(isupper(text[i])) 
+            result += </span><span class="s3">char</span><span class="s1">(</span><span class="s3">int</span><span class="s1">(text[i] + s - </span><span class="s5">65</span><span class="s1">) % </span><span class="s5">26 </span><span class="s1">+ </span><span class="s5">65</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+ 
+            </span><span class="s6">// Encrypt Lowercase letters</span><span class="s1"> 
+        </span><span class="s3">else</span><span class="s1"> 
+            result += </span><span class="s3">char</span><span class="s1">(</span><span class="s3">int</span><span class="s1">(text[i] + s - </span><span class="s5">97</span><span class="s1">) % </span><span class="s5">26 </span><span class="s1">+ </span><span class="s5">97</span><span class="s1">)</span><span class="s4">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s6">// Return the resulting string</span><span class="s1"> 
+    </span><span class="s3">return </span><span class="s1">result</span><span class="s4">;</span><span class="s1"> 
+} 
+</span></pre>
+</body>
+</html>
