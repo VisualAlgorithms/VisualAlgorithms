@@ -8,23 +8,23 @@ We encourage pull requests from anyone and everyone. Also, contact us if you wan
 
 ## Code Details
 
-- ~~Static, vanilla HTML (Possible plans for Node.js backend with Pug templating or SPA framework, undecided)~~
-- Updated: React frontend!!
-- Vanilla, client-side JavaScript
-- Bootstrap 4 styling
-- Visualizations - p5.js ~~(planned)~~ implemented
-- Client-side routing - react-router
-- Test runner - Mocha
-- Assertion library - Chai
-- Bundling - Webpack ~~(possible)~~
-- Transpiling - Babel
-- Packageh manager - npm
+- Frontend: React.js
+- Styling: Bootstrap 4
+- Visualizations: p5.js
+- Client-side routing: react-router
+- Test runner: Mocha
+- Assertion library: Chai
+- Bundler: Webpack
+- Transpiler: Babel
+- Package manager: npm
+- Backend: Node.js & Express (Firebase Functions)
+- Storage: Firebase Firestore
+- Hosting: Firebase Hosting
 
 ## References
 
-- <http://www.chaijs.com/guide/styles/>
-- <https://mochajs.org/#running-mocha-in-the-browser>
-- <https://www.robinwieruch.de/minimal-react-webpack-babel-setup/>
-- <https://www.npmjs.com/package/react-p5-wrapper>
-- Intro To JavaScript Unit Testing With Mocha JS & Chai
-      <https://www.youtube.com/watch?v=MLTRHc5dk6s>
+- Chai assertion library: <http://www.chaijs.com/guide/styles/>
+- Mocha test runner: <https://mochajs.org/#running-mocha-in-the-browser>
+- Setting up a React application without create-react-app: <https://www.robinwieruch.de/minimal-react-webpack-babel-setup/>
+- Wrapper for p5.js for integration with React: <https://www.npmjs.com/package/react-p5-wrapper>
+- Intro To JavaScript Unit Testing With Mocha JS & Chai: <https://www.youtube.com/watch?v=MLTRHc5dk6s>
