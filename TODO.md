@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Make GitPages wok with our project still. Right now the https://visualalgorithms.github.io/VisualAlgorithms/ page is just the README.md file.
 - [x] Make this a dynamic site. Handling all of these static pages is unreasonable.
 - [x] Fix Chai HTTPS github pages issue. (download source and use webpack?)
 - [ ] Implement methods for Circular Doubly Linked List with a dummy node
