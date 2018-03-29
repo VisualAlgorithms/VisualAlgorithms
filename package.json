@@ -1,6 +1,7 @@
 {
   "name": "visualalgorithms",
   "version": "1.0.0",
+  "private": true,
   "description": "A webpage to help with visualizations of common data structures and algorithms",
   "main": "index.js",
   "directories": {
@@ -8,7 +9,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development"
+    "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development",
+    "predeploy": "npm run build",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -19,8 +23,9 @@
   "bugs": {
     "url": "https://github.com/VisualAlgorithms/VisualAlgorithms/issues"
   },
-  "homepage": "https://github.com/VisualAlgorithms/VisualAlgorithms#readme",
+  "homepage": "https://github.com/VisualAlgorithms/VisualAlgorithms/",
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
