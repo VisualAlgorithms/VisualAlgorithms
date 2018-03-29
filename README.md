@@ -26,3 +26,4 @@ We encourage pull requests from anyone and everyone. Also, contact us if you wan
 - <https://mochajs.org/#running-mocha-in-the-browser>
 - <https://www.robinwieruch.de/minimal-react-webpack-babel-setup/>
 - <https://www.npmjs.com/package/react-p5-wrapper>
+- <https://medium.com/@archana_june/firebase-custom-domain-setup-with-godaddy-8b7acf66ccec>
