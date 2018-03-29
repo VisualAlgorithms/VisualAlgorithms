@@ -26,3 +26,5 @@ We encourage pull requests from anyone and everyone. Also, contact us if you wan
 - <https://mochajs.org/#running-mocha-in-the-browser>
 - <https://www.robinwieruch.de/minimal-react-webpack-babel-setup/>
 - <https://www.npmjs.com/package/react-p5-wrapper>
+- Intro To JavaScript Unit Testing With Mocha JS & Chai
+      <https://www.youtube.com/watch?v=MLTRHc5dk6s>
