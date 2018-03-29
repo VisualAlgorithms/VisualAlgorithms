@@ -28,3 +28,4 @@ We encourage pull requests from anyone and everyone. Also, contact us if you wan
 - Setting up a React application without create-react-app: <https://www.robinwieruch.de/minimal-react-webpack-babel-setup/>
 - Wrapper for p5.js for integration with React: <https://www.npmjs.com/package/react-p5-wrapper>
 - Intro To JavaScript Unit Testing With Mocha JS & Chai: <https://www.youtube.com/watch?v=MLTRHc5dk6s>
+- Custom domain setup: <https://medium.com/@archana_june/firebase-custom-domain-setup-with-godaddy-8b7acf66ccec>
