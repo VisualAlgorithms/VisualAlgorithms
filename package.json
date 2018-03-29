@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/VisualAlgorithms/VisualAlgorithms/issues"
   },
-  "homepage": "https://visualalgorithms.github.io/VisualAlgorithms/",
+  "homepage": "https://visualalgorithms.github.io/VisualAlgorithms/build/index.html",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
