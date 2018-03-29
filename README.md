@@ -14,7 +14,8 @@ See the live site: <https://visualalgorithms.github.io/VisualAlgorithms/>
 - Assertion library - Chai
 - Bundling - Webpack (possible)
 
-## Testing References
+## References
 
 - <http://www.chaijs.com/guide/styles/>
 - <https://mochajs.org/#running-mocha-in-the-browser>
+- <https://www.robinwieruch.de/minimal-react-webpack-babel-setup/>

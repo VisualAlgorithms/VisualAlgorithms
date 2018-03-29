@@ -1,7 +1,7 @@
 // TODO: implement clone(), set(), removeAll(), and retainAll()
 
 // Circular doubly-linked exogenous list with a dummy Node
-class LinkedList {
+export class LinkedList {
     constructor() {
         // Dummy Node has null data and prev / next pointers that point to itself
         this._dummy = new Node(null);
