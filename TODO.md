@@ -1,12 +1,24 @@
 # TODO
 
-- [ ] Make this a dynamic site. Handling all of these static pages is unreasonable.
+- [x] Make this a dynamic site. Handling all of these static pages is unreasonable.
 - [x] Fix Chai HTTPS github pages issue. (download source and use webpack?)
 - [ ] Implement methods for Circular Doubly Linked List with a dummy node
-- [ ] Write tests for above
-- [ ] Find Gaius Julius Caesar font and implament in caesarcipher.html
-- [ ] Ask @mrwatts88 what Extensions he has in Visual Studio Code
+- [ ] Write tests for Circular Doubly Linked List
+- [ ] Find Gaius Julius Caesar font and implement in caesarcipher.html
+- [x] Ask @mrwatts88 what Extensions he has in Visual Studio Code
 - [ ] Implement About
+- [ ] Move test and caesar cipher into React components
+- [ ] Change source code for linked list methods to HTML
+- [ ] Find easy way to change source code into usable HTML
+- [ ] Make sure that site still works on github pages
+- [ ] Add some documentation about the directory structure, setup, tools
+- [ ] Add contributing guidelines
+- [ ] Add linting rules
+- [ ] Make sure navbar dropdown works
+- [ ] Look into vs code live sharing
+- [ ] Write tests for React components
+- [ ] Install mocha and chai as npm modules and change imports
+- [ ] pass in props to the navbar so the correct tab is active
 
 ## Watch List
 
