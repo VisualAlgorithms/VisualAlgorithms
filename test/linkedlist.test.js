@@ -12,7 +12,6 @@ describe('Linked List', function () {
             expect(ll._dummy.prev).to.equal(ll._dummy);
             expect(ll._dummy.next.next).to.equal(ll._dummy);
             expect(ll._dummy.prev.prev).to.equal(ll._dummy);
-            assert.isbellow(10,100,"10 is strictly less < than 100")
         });
     });
 
