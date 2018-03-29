@@ -15,8 +15,10 @@
 - [ ] Add some documentation about the directory structure, setup, tools
 - [ ] Add contributing guidelines
 - [ ] Add linting rules
-- [ ] Make sure navbar dropdown works
+- [x] Make sure navbar dropdown works
 - [ ] Look into vs code live sharing
 - [ ] Write tests for React components
 - [ ] Install mocha and chai as npm modules and change imports
-- [ ] pass in props to the navbar so the correct tab is active
+- [ ] Pass in props to the navbar so the correct tab is active
+- [ ] Integrate CircleCI for continuous integration
+- [ ] Fix "caeser" spelling error in react component
