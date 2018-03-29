@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linked List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/linkedlist.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+</head>
+
+<body>
+    <!-- Start navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="index.html">VisualAlgorithms</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="linkedlist.html">Linked List</a>
+                    <span class="sr-only">(current)</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test/tests.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End navbar -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5">
+
+                <!-- Start accordian -->
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h6 class="mb-0">
+                                <span class="line-height-accordian arrow-cursor">
+                                    add()
+                                </span>
+                                <i class="fa fa-play pull-right line-height-accordian pointer-cursor"></i>
+                                <i class="fa fa-bars pull-right line-height-accordian pointer-cursor" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne"></i>
+                            </h6>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <!-- DO NOT CHANGE FORMATTING BETWEEN THESE COMMENTS-->
+                                <code>
+                                     <pre>
+// Adds a node containing 'obj' to the end of the list
+add(obj) { 
+    const d = this._dummy;
+    const n = new Node(obj, d, d.prev);
+
+    d.prev.next = n; 
+    d.prev = n; 
+    ++this._size; 
+
+    return true;
+}                                   </pre>
+                                </code>
+                                <!-- END OF FORMATTING WARNING -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h6 class="mb-0">
+                                <span class="line-height-accordian arrow-cursor">
+                                    remove()
+                                </span>
+                                <i class="fa fa-play pull-right line-height-accordian pointer-cursor"></i>
+                                <i class="fa fa-bars pull-right line-height-accordian pointer-cursor" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                    aria-controls="collapseOne"></i>
+                            </h6>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <!-- DO NOT CHANGE FORMATTING BETWEEN THESE COMMENTS-->
+                                <code>
+                                    <pre>
+// Removes the node containing 'obj';
+// returns true if successful
+remove(obj) {
+    let n = this._dummy.next;
+    
+    while (n !== this._dummy) {
+        if (n.data === object) {
+            n.next.prev = n.prev;
+            n.prev.next = n.next;
+            --this._size;
+            return true; 
+        }
+        
+        n = n.next;
+    }
+    
+    return false; 
+}                                   </pre>
+                                </code>
+                                <!-- END OF FORMATTING WARNING -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h6 class="mb-0">
+                                <span class="line-height-accordian arrow-cursor">
+                                    get()
+                                </span>
+                                <i class="fa fa-play pull-right line-height-accordian pointer-cursor"></i>
+                                <i class="fa fa-bars pull-right line-height-accordian pointer-cursor" data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="true" aria-controls="collapseOne"></i>
+                            </h6>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <!-- DO NOT CHANGE FORMATTING BETWEEN THESE COMMENTS-->
+                                <code>
+                                    <pre>
+// Returns element at 'index' without removing
+get(index) {
+    if (index > this._size - 1)
+        throw new Error('Invalid index');
+
+    let n = this._dummy.next;
+    for (let i = 0; i < index; ++i) 
+        n=n.next;
+    
+    return n.data;
+}                                   </pre>
+                                </code>
+                                <!-- END OF FORMATTING WARNING -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End accordian -->
+            </div>
+            <!-- // col -->
+            <div class="col-lg-7" id="p5-canvas"></div>
+        </div>
+        <!-- // row -->
+    </div>
+    <!-- // container -->
+    <script src="./js/linkedlistanim.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./datastructures/linkedlist/linkedlist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+.container-fluid {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.fa-bars {
+    margin-right: .5em;
+}
+
+.line-height-accordian {
+    line-height: 38px !important;
+}
+
+.arrow-cursor {
+    cursor: default;
+}
+
+pre {
+    margin-bottom: 0;
+}
+
+#p5-canvas {
+    min-height: 400px;
+}
