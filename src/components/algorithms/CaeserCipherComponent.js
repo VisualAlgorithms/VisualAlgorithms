@@ -13,7 +13,6 @@ export default class CaesarCipherComponent extends React.Component {
     render() {
         return (<div>
             <Navbar />
-            <CodeCard />
             <div class="container">
                 <h1 class="display-3">Welcome Fellow Romans!</h1>
                 <p>
@@ -28,6 +27,10 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a class="btn btn-lg" href=".https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
+                <CodeCard />
+                <CodeCard />
+                <CodeCard />
+                <CodeCard />
             </div>
         </div>
         );
