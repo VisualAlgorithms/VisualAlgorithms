@@ -9,9 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development",
+    "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development --open --hot",
     "startfire": "npm run build && firebase serve --only functions,hosting",
-    "build": "webpack --mode development",
+    "build": "webpack --mode production",
     "deploy": "npm run build && firebase deploy"
   },
   "repository": {
@@ -27,7 +27,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.2.0",
-    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-p5-wrapper": "0.0.4",
     "react-router-dom": "^4.2.2"
@@ -40,8 +39,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
-    "react-hot-loader": "^4.0.0",
     "style-loader": "^0.20.3",
+    "html-webpack-plugin": "^3.1.0",
     "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"

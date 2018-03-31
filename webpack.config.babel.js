@@ -1,8 +1,8 @@
-import webpack from 'webpack';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 export default {
     entry: [
-        'react-hot-loader/patch',
         './src/index.js'
     ],
     module: {
@@ -22,15 +22,13 @@ export default {
         extensions: ['*', '.js', '.jsx']
     },
     output: {
-        path: __dirname + '/build',
+        path: path.join(__dirname, '/dist'),
         publicPath: '/',
         filename: 'bundle.js'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
-    devServer: {
-        contentBase: './build',
-        hot: true
-    }
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        })
+    ]
 };

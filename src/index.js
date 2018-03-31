@@ -1,15 +1,17 @@
+import App from './components/App';
+import CaeserCipherComponent from './components/algorithms/CaeserCipherComponent';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+import LinkedListComponent from './components/datastructures/LinkedListComponent';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from 'react-router-dom';
-import Routes from './routes';
-
-const title = 'VisualAlgorithms';
 
 ReactDOM.render(
     <HashRouter>
-        <Routes />
+        <Switch>
+            <Route exact path='/' component={App} />
+            <Route exact path='/linkedlist' component={LinkedListComponent} />
+            <Route exact path='/caesercipher' component={CaeserCipherComponent} />
+        </Switch>
     </HashRouter>,
     document.getElementById('root')
 );
-
-module.hot.accept();

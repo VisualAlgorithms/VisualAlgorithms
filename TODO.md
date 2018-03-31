@@ -22,3 +22,4 @@
 - [ ] Pass in props to the navbar so the correct tab is active
 - [ ] Integrate CircleCI for continuous integration
 - [ ] Fix "caeser" spelling error in react component
+- [ ] Make sure accordian expand onClick doesn't fire when clicking play button
