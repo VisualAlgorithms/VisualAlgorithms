@@ -8,9 +8,9 @@ const fs = require('fs');
 app.use(cors());
 
 app.get('/code', (req, res) => {
-    fs.readFile(path.join(__dirname, "/code/test.js"), (err,data) => {
+    fs.readFile(path.join(__dirname, "/test.js"), (err,data) => {
         if(err)
-            res.sendStatus(404);
+            console.log(err);
         else
             res.send(data);
     });   

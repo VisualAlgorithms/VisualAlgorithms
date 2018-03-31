@@ -9,7 +9,6 @@ export default class LinkedListComponent extends React.Component {
     constructor() {
         super();
         this.state = {};
-
         this.createLL = this.createLL.bind(this);
     }
 
@@ -41,7 +40,7 @@ export default class LinkedListComponent extends React.Component {
                                     <div className="card-body">
                                         <pre>
                                             <code>add(obj) {'{'}<br />
-                                                &nbsp; &nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
+                                                &nbsp;&nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;const n = new Node(obj, d, d.prev);<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;d.prev.next = n;<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;d.prev = n;<br />
@@ -68,7 +67,7 @@ export default class LinkedListComponent extends React.Component {
                                     <div className="card-body">
                                         <pre>
                                             <code>add(obj) {'{'}<br />
-                                                &nbsp; &nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
+                                                &nbsp;&nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;const n = new Node(obj, d, d.prev);<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;d.prev.next = n;<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;d.prev = n;<br />
@@ -95,7 +94,7 @@ export default class LinkedListComponent extends React.Component {
                                     <div className="card-body">
                                         <pre>
                                             <code>add(obj) {'{'}<br />
-                                                &nbsp; &nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
+                                                &nbsp;&nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;const n = new Node(obj, d, d.prev);<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;d.prev.next = n;<br />
                                                 &nbsp;&nbsp;&nbsp;&nbsp;d.prev = n;<br />

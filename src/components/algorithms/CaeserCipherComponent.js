@@ -10,13 +10,13 @@ import axios from 'axios';
 export default class CaesarCipherComponent extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {str:''};
         this.doFetch = this.doFetch.bind(this);
     }
 
     doFetch() {
-        axios.get('https://us-central1-visualalgorithms-326e6.cloudfunctions.net/app/code')
-            .then(response => console.log(response))
+        axios.get('/code')
+            .then(response => this.setState({str:response.data}))
             .catch(err => console.log(err));
     }
 
@@ -35,13 +35,10 @@ export default class CaesarCipherComponent extends React.Component {
                 </p>
                 <div className="float-right">~Wikipedia</div>
                 <p>
-                    <a className="btn btn-lg" href=".https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
+                    <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <CodeCard />
-                <CodeCard />
-                <CodeCard />
-                <CodeCard />
-                <p onClick={this.doFetch}>click me</p>
+                <button type="button" onClick={this.doFetch}>Get Code</button>                
+                <div>{htmlify(this.state.str)}</div>
             </div>
         </div>
         );

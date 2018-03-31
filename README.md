@@ -2,11 +2,7 @@
 
 This project consists of visual representations of common data structures and algorithms, meant to be used as a learning tool for students / job seekers. Unit tests are also viewable on the live site under the "Test" tab.
 
-<<<<<<< HEAD
 See the live site: [VisualAlgorithms.tech](https://visualalgorithms.tech)
-=======
-See the live site: <https://visualalgorithms-326e6.firebaseapp.com>
->>>>>>> 0d894bc2b4a3d39197afed462157e595df4e83d6
 
 We encourage pull requests from anyone and everyone. Also, contact us if you want to become a contributor (Do this by opening an issue with your contact info).
 
