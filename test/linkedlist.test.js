@@ -1,4 +1,5 @@
-const { expect } = chai;
+import { expect } from 'chai';
+import { LinkedList, Node } from '../lib/datastructures/linkedlist/linkedlist';
 
 describe('Linked List', function () {
     describe('constructor', function () {
