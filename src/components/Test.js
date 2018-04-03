@@ -15,7 +15,7 @@ export default class Test extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.test}>Run Tests</button>
+                <button className="btn btn-secondary" onClick={this.test}>Run Tests</button>
                 <div id="mocha" ></div >
             </div>
         );
