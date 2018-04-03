@@ -1,7 +1,7 @@
 import App from './components/App';
-import CaeserCipherComponent from './components/algorithms/CaeserCipherComponent';
+import CaeserCipherComponent from './components/CaeserCipherComponent';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import LinkedListComponent from './components/datastructures/LinkedListComponent';
+import LinkedListComponent from './components/LinkedListComponent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Test from './components/Test';

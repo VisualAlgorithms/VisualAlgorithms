@@ -1,22 +1,22 @@
-import '../../css/caesarcipher.css';
+import '../css/caesarcipher.css';
 import React from 'react';
-import Navbar from '../Navbar';
-import CodeCard from '../CodeCard';
+import Navbar from './Navbar';
+import CodeCard from './CodeCard';
 import { Router, Route, Switch } from 'react-router';
 import P5Wrapper from 'react-p5-wrapper';
-import htmlify from '../../utils';
+import htmlify from '../utils';
 import axios from 'axios';
 
 export default class CaesarCipherComponent extends React.Component {
     constructor() {
         super();
-        this.state = {str:''};
+        this.state = { str: '' };
         this.doFetch = this.doFetch.bind(this);
     }
 
     doFetch() {
         axios.get('/code')
-            .then(response => this.setState({str:response.data}))
+            .then(response => this.setState({ str: response.data }))
             .catch(err => console.log(err));
     }
 
@@ -37,7 +37,7 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <button type="button" onClick={this.doFetch}>Get Code</button>                
+                <button type="button" onClick={this.doFetch}>Get Code</button>
                 <div>{htmlify(this.state.str)}</div>
             </div>
         </div>
