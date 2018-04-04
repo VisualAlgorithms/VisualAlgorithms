@@ -248,7 +248,7 @@ describe('Linked List', function () {
         });
 
         it('should contain +1 elements than previous linkedlist', () => {
-            chai.expect(ll2).size.to.equal(ll.size+1);
+            expect(ll2._size).to.equal(ll._size+1);
         });
     });
 
