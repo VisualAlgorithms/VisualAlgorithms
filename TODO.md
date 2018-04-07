@@ -2,24 +2,26 @@
 
 - [x] Make GitPages wok with our project still. Right now the https://visualalgorithms.github.io/VisualAlgorithms/ page is just the README.md file.
 - [x] Make this a dynamic site. Handling all of these static pages is unreasonable.
-- [x] Fix Chai HTTPS github pages issue. (download source and use webpack?)
+- [x] Fix Chai HTTPS github pages issue. (download source and use webpack?) (using npm and webpack)
 - [ ] Implement methods for Circular Doubly Linked List with a dummy node
 - [ ] Write tests for Circular Doubly Linked List
 - [ ] Find Gaius Julius Caesar font and implement in caesarcipher.html
 - [x] Ask @mrwatts88 what Extensions he has in Visual Studio Code
 - [ ] Implement About
-- [ ] Move test and caesar cipher into React components
-- [ ] Change source code for linked list methods to HTML
-- [ ] Find easy way to change source code into usable HTML
+- [x] Move test and caesar cipher into React components
+- [x] Change source code for linked list methods to HTML
+- [x] Find easy way to change source code into usable HTML (Fetching source code from server, and parsing/htmlifying on client)
 - [x] ~~Make sure that site still works on github pages~~ (now hosting on firebase)
 - [ ] Add some documentation about the directory structure, setup, tools
 - [ ] Add contributing guidelines
 - [ ] Add linting rules
 - [x] Make sure navbar dropdown works
-- [ ] Look into vs code live sharing
+- [x] Look into vs code live sharing (not supported in Linux)
 - [ ] Write tests for React components
-- [ ] Install mocha and chai as npm modules and change imports
+- [x] Install mocha and chai as npm modules and change imports
+- [ ] Fix mocha in-browser quirks
 - [ ] Pass in props to the navbar so the correct tab is active
 - [ ] Integrate CircleCI for continuous integration
 - [ ] Fix "caeser" spelling error in react component
 - [ ] Make sure accordian expand onClick doesn't fire when clicking play button
+- [ ] Store results of doFetch() and parseMethod() so they aren't called so often
