@@ -1,0 +1,13 @@
+#mocha-stats {
+    position: relative;
+    top: 5px;
+    right: 10px;
+    font-size: 12px;
+    margin: 0;
+    color: #888;
+    z-index: 1;
+  }
+  #mocha {
+    font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 50px;
+  }

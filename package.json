@@ -26,7 +26,7 @@
   "homepage": "https://visualalgorithms.tech",
   "dependencies": {
     "axios": "^0.18.0",
-    "react": "^16.2.0",
+    "react": "^16.3.1",
     "react-dom": "^16.2.0",
     "react-p5-wrapper": "0.0.4",
     "react-router-dom": "^4.2.2"
