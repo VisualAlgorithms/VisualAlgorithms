@@ -13,7 +13,7 @@ export default class PresentationPage extends React.Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-5">
-                        <Accordian />
+                        <Accordian fileName={this.props.fileName} ext={this.props.ext} />
                     </div>
                     <div className="col-lg-7" id="p5-div">
                         <P5Wrapper sketch={this.props.sketch} />

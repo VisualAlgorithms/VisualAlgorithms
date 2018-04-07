@@ -21,7 +21,7 @@ export default class LinkedListComponent extends React.Component {
         return (
             <div>
                 <Navbar />
-                <PresentationPage sketch={sketch} />
+                <PresentationPage fileName='linkedlist' ext='js' sketch={sketch} />
             </div>
         );
     }

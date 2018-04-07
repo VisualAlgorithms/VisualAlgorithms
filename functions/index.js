@@ -7,13 +7,15 @@ const fs = require('fs');
 
 app.use(cors());
 
-app.get('/code', (req, res) => {
-    fs.readFile(path.join(__dirname, "/code/test.js"), (err,data) => {
-        if(err)
+app.get('/code/:filename/:ext', (req, res) => {
+    const fileName = req.params.filename;
+    const extension = req.params.ext;
+    fs.readFile(path.join(__dirname, `/code/${fileName}.${extension}`), (err, data) => {
+        if (err)
             res.sendStatus(404);
         else
             res.send(data);
-    });   
+    });
 });
 
 // Catch 404 and forward to error handler

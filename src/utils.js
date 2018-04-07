@@ -9,4 +9,19 @@ const htmlify = (arg) => {
         <span dangerouslySetInnerHTML={{ __html }}></span>
     );
 }
-export { htmlify };
+
+const parseMethod = (signature, codeString) => {
+    const startIndex = codeString.indexOf(signature);
+    if (startIndex == -1) return '';
+    const startBrace = codeString.indexOf('{', startIndex);
+    let i = startBrace + 1;
+    let stack = 1;
+    while (stack != 0) {
+        if (codeString[i] == '{')++stack;
+        else if (codeString[i] == '}')--stack;
+        ++i;
+    }
+    return codeString.substring(startIndex, i);
+}
+
+export { htmlify, parseMethod };

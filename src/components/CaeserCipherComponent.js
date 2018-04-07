@@ -15,7 +15,7 @@ export default class CaesarCipherComponent extends React.Component {
     }
 
     doFetch() {
-        axios.get('/code')
+        axios.get('/code/test/js') // '/code/<filename>/<file extension>'
             .then(response => this.setState({ str: response.data }))
             .catch(err => console.log(err));
     }

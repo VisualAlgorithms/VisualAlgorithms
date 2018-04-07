@@ -1,4 +1,5 @@
 import React from 'react';
+import { htmlify } from '../utils';
 
 export default class AccordianCard extends React.Component {
     constructor() {
@@ -20,17 +21,7 @@ export default class AccordianCard extends React.Component {
                 </div>
                 <div id={this.props.collapseId} className={"collapse " + this.props.show} aria-labelledby="headingOne" data-parent="#accordion">
                     <div className="card-body">
-                        <pre>
-                            <code>add(obj) {'{'}<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;const d = this._dummy;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;const n = new Node(obj, d, d.prev);<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;d.prev.next = n;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;d.prev = n;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;++this._size;<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;return true;<br />
-                                {'}'}
-                            </code>
-                        </pre>
+                        {htmlify(this.props.methodString)}
                     </div>
                 </div>
             </div>

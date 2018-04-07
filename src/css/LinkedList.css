@@ -24,5 +24,5 @@ pre {
 }
 
 #p5-canvas {
-    min-height: 400px;
+    min-height: 600px !important;
 }
