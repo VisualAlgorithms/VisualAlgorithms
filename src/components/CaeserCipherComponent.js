@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import CodeCard from './CodeCard';
 import { Router, Route, Switch } from 'react-router';
 import P5Wrapper from 'react-p5-wrapper';
-import htmlify from '../utils';
+import { htmlify } from '../utils';
 import axios from 'axios';
 
 export default class CaesarCipherComponent extends React.Component {
