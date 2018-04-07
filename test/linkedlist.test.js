@@ -234,16 +234,21 @@ describe('Linked List', function () {
 
     describe('clone', () => {
         let ll;
+        let ll2;
         beforeEach(() => {
             ll = new LinkedList();
             ll.add(5);
-            ll.add(0);
+            ll.add(0)
             ll.add(null);
             ll.add(6);
+
+            ll2 = new LinkedList(); 
+            ll2 = ll.clone();
+            ll2.add(100);
         });
 
-        it('needs to be implemented', () => {
-            expect(true).to.equal(false);
+        it('should contain +1 elements than previous linkedlist', () => {
+            expect(ll2._size).to.equal(ll._size+1);
         });
     });
 

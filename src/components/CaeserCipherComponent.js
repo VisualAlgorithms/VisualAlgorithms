@@ -37,7 +37,7 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <button type="button" onClick={this.doFetch}>Get Code</button>
+                <button type="button" className="btn btn-secondary" onClick={this.doFetch}>Get Code</button>
                 <div>{htmlify(this.state.str)}</div>
             </div>
         </div>
