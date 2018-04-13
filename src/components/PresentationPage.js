@@ -1,6 +1,7 @@
 import Accordian from './Accordian';
 import P5Wrapper from 'react-p5-wrapper';
 import React from 'react';
+import "../css/presentationpage.css";
 
 
 export default class PresentationPage extends React.Component {
