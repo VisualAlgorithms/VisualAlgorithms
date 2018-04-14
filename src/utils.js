@@ -12,7 +12,7 @@ const htmlify = (arg) => {
 
 const parseMethod = (signature, codeString) => {
     const startIndex = codeString.indexOf(signature);
-    if (startIndex == -1) return '';
+    if (startIndex == -1) return 'loading...';
     const startBrace = codeString.indexOf('{', startIndex);
     let i = startBrace + 1;
     let stack = 1;
