@@ -10,18 +10,34 @@ export default class LinkedListComponent extends React.Component {
         super();
         this.state = {};
         this.createLL = this.createLL.bind(this);
+        this.methods = [
+            {
+                id: 'one',
+                header: 'add(obj)',
+                arguments: ['obj']
+            },
+            {
+                id: 'two',
+                header: 'get(index)',
+                arguments: ['index']
+            },
+            {
+                id: 'three',
+                header: 'remove(obj)',
+                arguments: ['obj']
+            }
+        ]
     }
 
     createLL() {
         let ll = new LinkedList();
-        console.log(ll);
     }
 
     render() {
         return (
             <div>
                 <Navbar />
-                <PresentationPage fileName='linkedlist' ext='js' sketch={sketch} />
+                <PresentationPage fileName='linkedlist' ext='js' sketch={sketch} methods={this.methods} />
             </div>
         );
     }
@@ -34,10 +50,10 @@ function sketch(p) {
     const canvasWidth = () => canvasDiv.offsetWidth - 30;
     const canvasHeight = () => canvasDiv.offsetHeight - 7;
     const canvasDiv = document.getElementById('p5-div');
- 
+
     let drawer;
     const SCALE = 1;
-    
+
     p.windowResized = () => {
         p.resizeCanvas(canvasWidth(), canvasHeight());
     }
@@ -47,8 +63,8 @@ function sketch(p) {
         canvas = p.createCanvas(canvasWidth(), canvasHeight());
         canvas.mousePressed(drawNode);
         canvas.parent(canvasDiv);
-        p.background(204,226,225);
-       
+        p.background(204, 226, 225);
+
         p.rectMode(p.CENTER);
         drawer = new NodeDrawer();
         for (let i = 0; i < 2; ++i)
@@ -59,7 +75,7 @@ function sketch(p) {
         drawer.add(new NodeGraphics(Math.floor(p.random(100))));
     }
 
-    p.draw = () =>{
+    p.draw = () => {
         p.translate(p.width / 2, p.height / 2);
         p.background(220);
         drawer.drawAllNodes();
@@ -67,7 +83,7 @@ function sketch(p) {
         drawer.drawAllDs();
     }
 
-    p.drawBus= () =>{
+    p.drawBus = () => {
         // bus
         p.noFill();
         p.ellipse(0, 0, p.width * 0.63, p.height * 0.63);

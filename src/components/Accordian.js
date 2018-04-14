@@ -25,21 +25,33 @@ export default class Accordian extends React.Component {
     render() {
         return (
             <div id="accordion" >
-                <AccordianCard
-                    methodString={parseMethod('add(obj)', this.state.codeString)}
-                    methodSig='add(obj)'
-                    collapseId='one'
-                    show="show" />
-                <AccordianCard
-                    methodString={parseMethod('get(index)', this.state.codeString)}
-                    methodSig='get(index)'
-                    collapseId='two'
-                    show="" />
-                <AccordianCard
-                    methodString={parseMethod('remove(obj)', this.state.codeString)}
-                    methodSig='remove(obj)'
-                    collapseId='three'
-                    show="" />
+
+                {
+                    this.props.methods.map((method) => {
+                        return <AccordianCard
+                            methodString={parseMethod(method.header, this.state.codeString)}
+                            methodSig={method.header}
+                            collapseId={method.id}
+                            show={method.id == 'one' ? 'show' : ''}
+                        />
+                    })
+                }
+
+                {/* //     <AccordianCard
+            //         methodString={parseMethod('add(obj)', this.state.codeString)}
+            //         methodSig='add(obj)'
+            //         collapseId='one'
+            //         show="show" />
+            //     <AccordianCard
+            //         methodString={parseMethod('get(index)', this.state.codeString)}
+            //         methodSig='get(index)'
+            //         collapseId='two'
+            //         show="" />
+            //     <AccordianCard
+            //         methodString={parseMethod('remove(obj)', this.state.codeString)}
+            //         methodSig='remove(obj)'
+            //         collapseId='three'
+            //         show="" /> */}
             </div>
         );
     }
