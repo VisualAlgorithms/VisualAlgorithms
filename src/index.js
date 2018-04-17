@@ -1,5 +1,5 @@
 import App from './components/App';
-import CaeserCipherComponent from './components/CaeserCipherComponent';
+import CaesarCipherComponent from './components/CaesarCipherComponent';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import LinkedListComponent from './components/LinkedListComponent';
 import React from 'react';
@@ -11,7 +11,7 @@ ReactDOM.render(
         <Switch>
             <Route exact path='/' component={App} />
             <Route exact path='/linkedlist' component={LinkedListComponent} />
-            <Route exact path='/caesercipher' component={CaeserCipherComponent} />
+            <Route exact path='/caesarcipher' component={CaesarCipherComponent} />
             <Route exact path='/test' component={Test} />
         </Switch>
     </HashRouter>,

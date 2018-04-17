@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string encrypt(string text, int s);
+string encrypt(string , int);
 
 int main(int carg, char **varg) {
     if (carg != 4) {

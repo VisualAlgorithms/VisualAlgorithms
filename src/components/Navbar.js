@@ -36,7 +36,7 @@ export default class Navbar extends React.Component {
                                 Algorithms
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link className="dropdown-item" to='/caesercipher'>Caesar Cipher</Link>
+                                <Link className="dropdown-item" to='/caesarcipher'>Caesar Cipher</Link>
                             </div>
                         </li>
 

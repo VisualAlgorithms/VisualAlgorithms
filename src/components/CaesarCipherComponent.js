@@ -21,7 +21,7 @@ export default class CaesarCipherComponent extends React.Component {
             {
                 id: 'two',
                 header: 'encrypt(string text, int s)',
-                arguments: ['string', 'int s']
+                arguments: ['string text', 'int s']
             }
         ]
     }
