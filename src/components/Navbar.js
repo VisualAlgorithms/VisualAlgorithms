@@ -9,34 +9,34 @@ export default class Navbar extends React.Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <Link className="navbar-brand" to='/'>VisualAlgorithms</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse navbar-fixed-top" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav ">
                         <li className="nav-item active">
                             <Link className="nav-link" to='/'>Home</Link>
                             <span className="sr-only">(current)</span>
                         </li>
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Data Structures
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link className="nav-link" to='/linkedlist'>Linked List</Link>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link className="dropdown-item" to='/linkedlist'>Linked List</Link>
                             </div>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Algorithms
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link className="nav-link" to='/caesercipher'>Caesar Cipher</Link>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link className="dropdown-item" to='/caesercipher'>Caesar Cipher</Link>
                             </div>
                         </li>
 

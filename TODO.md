@@ -25,4 +25,5 @@
 - [ ] Fix "caeser" spelling error in react component
 - [ ] Make sure accordian expand onClick doesn't fire when clicking play button
 - [ ] Store results of doFetch() and parseMethod() so they aren't called so often
-- [ ] Integrate github into slack
+- [X] Integrate github into slack
+- [ ] Make sure Webpapge doesn't sleep on mobile phones https://stackoverflow.com/questions/11529247/in-html5-how-can-i-keep-an-android-device-s-screen-on

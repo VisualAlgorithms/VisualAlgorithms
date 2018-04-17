@@ -6,12 +6,25 @@ import { Router, Route, Switch } from 'react-router';
 import P5Wrapper from 'react-p5-wrapper';
 import { htmlify } from '../utils';
 import axios from 'axios';
+import PresentationPage from './PresentationPage';
 
 export default class CaesarCipherComponent extends React.Component {
     constructor() {
         super();
         this.state = { str: '' };
         this.doFetch = this.doFetch.bind(this);
+        this.methods = [
+            {
+                id: 'one',
+                header: 'main(int carg, char **varg)',
+                arguments: ['int carg', 'char **varg']
+            },
+            {
+                id: 'two',
+                header: 'encrypt(string text, int s)',
+                arguments: ['string', 'int s']
+            }
+        ]
     }
 
     doFetch() {
@@ -37,10 +50,14 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <button type="button" className="btn btn-secondary" onClick={this.doFetch}>Get Code</button>
-                <div>{htmlify(this.state.str)}</div>
+                <PresentationPage fileName='caesercipher\caesercipher' ext='cpp' sketch={sketch} methods={this.methods} />
             </div>
         </div>
         );
     }
+}
+
+function sketch(p) {
+
+
 }

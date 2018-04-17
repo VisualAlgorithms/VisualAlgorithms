@@ -25,6 +25,21 @@ export default class LinkedListComponent extends React.Component {
                 id: 'three',
                 header: 'remove(obj)',
                 arguments: ['obj']
+            },
+            {
+                id: 'four',
+                header: 'clear()',
+                arguments: []
+            },
+            {
+                id: 'five',
+                header: 'set(index, object)',
+                arguments: ['index', 'object']
+            },
+            {
+                id: 'six',
+                header: 'indexOf(object)',
+                arguments: ['object']
             }
         ]
     }

@@ -10,6 +10,7 @@ app.use(cors());
 app.get('/code/:filename/:ext', (req, res) => {
     const fileName = req.params.filename;
     const extension = req.params.ext;
+    console.log(fileName +"." + extension)
     fs.readFile(path.join(__dirname, `/code/${fileName}.${extension}`), (err, data) => {
         if (err)
             res.sendStatus(404);
