@@ -1,6 +1,6 @@
 # TODO
 
-- [x] Make GitPages wok with our project still. Right now the https://visualalgorithms.github.io/VisualAlgorithms/ page is just the README.md file.
+- [x] Make GitPages work with our project still. Right now the https://visualalgorithms.github.io/VisualAlgorithms/ page is just the README.md file.
 - [x] Make this a dynamic site. Handling all of these static pages is unreasonable.
 - [x] Fix Chai HTTPS github pages issue. (download source and use webpack?) (using npm and webpack)
 - [ ] Implement methods for Circular Doubly Linked List with a dummy node
@@ -22,8 +22,8 @@
 - [ ] Fix mocha in-browser quirks
 - [ ] Pass in props to the navbar so the correct tab is active
 - [ ] Integrate CircleCI for continuous integration
-- [ ] Fix "caeser" spelling error in react component
+- [x] Fix "caesar" spelling error in react component
 - [ ] Make sure accordian expand onClick doesn't fire when clicking play button
 - [ ] Store results of doFetch() and parseMethod() so they aren't called so often
-- [X] Integrate github into slack
+- [x] Integrate github into slack
 - [ ] Make sure Webpapge doesn't sleep on mobile phones https://stackoverflow.com/questions/11529247/in-html5-how-can-i-keep-an-android-device-s-screen-on
