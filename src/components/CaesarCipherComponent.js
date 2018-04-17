@@ -12,7 +12,6 @@ export default class CaesarCipherComponent extends React.Component {
     constructor() {
         super();
         this.state = { str: '' };
-        this.doFetch = this.doFetch.bind(this);
         this.methods = [
             {
                 id: 'one',
@@ -22,15 +21,9 @@ export default class CaesarCipherComponent extends React.Component {
             {
                 id: 'two',
                 header: 'encrypt(string text, int s)',
-                arguments: ['string', 'int s']
+                arguments: ['string text', 'int s']
             }
         ]
-    }
-
-    doFetch() {
-        axios.get('/code/test/js') // '/code/<filename>/<file extension>'
-            .then(response => this.setState({ str: response.data }))
-            .catch(err => console.log(err));
     }
 
     render() {
@@ -50,7 +43,7 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <PresentationPage fileName='caesarcipher/caesarcipher' ext='cpp' sketch={sketch} methods={this.methods} />
+                <PresentationPage fileName='caesarcipher/caesarciphar' ext='cpp' sketch={sketch} methods={this.methods} />
             </div>
         </div>
         );
