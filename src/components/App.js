@@ -11,7 +11,7 @@ export default class App extends React.Component {
     render() {
         return (<div>
             <Navbar />
-            <div className="container">
+            <div className="container-fluid">
                 <h1 className="display-3">Hello World!</h1>
                 <p>This website is dedicated to those who ask questions and seek solutions to some of the worlds most difficult problems.
             We hope you enjoy the journey as much as we do. ~Z</p>

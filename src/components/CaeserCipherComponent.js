@@ -29,7 +29,7 @@ export default class CaesarCipherComponent extends React.Component {
     render() {
         return (<div>
             <Navbar />
-            <div className="container">
+            <div className="container-fluid">
                 <h1 className="display-3">Welcome Fellow Romans!</h1>
                 <p>
                     In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one
@@ -43,8 +43,8 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <PresentationPage fileName='caesercipher/caesercipher' ext='cpp' sketch={sketch} methods={this.methods} />
             </div>
+            <PresentationPage fileName='caesercipher/caesercipher' ext='cpp' sketch={sketch} methods={this.methods} />
         </div>
         );
     }
