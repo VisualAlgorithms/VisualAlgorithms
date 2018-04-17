@@ -21,7 +21,7 @@ export default class CaesarCipherComponent extends React.Component {
             {
                 id: 'two',
                 header: 'encrypt(string text, int s)',
-                arguments: ['string', 'int s']
+                arguments: ['string text', 'int s']
             }
         ]
     }
@@ -43,7 +43,7 @@ export default class CaesarCipherComponent extends React.Component {
                 <p>
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
-                <PresentationPage fileName='caesercipher/caesercipher' ext='cpp' sketch={sketch} methods={this.methods} />
+                <PresentationPage fileName='caesarcipher/caesarciphar' ext='cpp' sketch={sketch} methods={this.methods} />
             </div>
         </div>
         );
