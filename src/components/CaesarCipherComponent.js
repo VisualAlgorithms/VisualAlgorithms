@@ -44,7 +44,7 @@ export default class CaesarCipherComponent extends React.Component {
                     <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
             </div>
-            <PresentationPage fileName='caesercipher/caesercipher' ext='cpp' sketch={sketch} methods={this.methods} />
+            <PresentationPage fileName='caesercipher/caesarcipher' ext='cpp' sketch={sketch} methods={this.methods} />
         </div>
         );
     }
