@@ -17,10 +17,15 @@ export default class Accordian extends React.Component {
     }
 
     doFetch() {
-        axios.get(`/code/${this.props.fileName}/${this.props.ext}`)
+        axios.get(`/code?filename=${this.props.fileName}&ext=${this.props.ext}`)
             .then(response => this.setState({ codeString: response.data }))
             .catch(err => console.log(err));
     }
+    // doFetch() {
+    //     axios.get(`/code/${this.props.fileName}/${this.props.ext}`)
+    //         .then(response => this.setState({ codeString: response.data }))
+    //         .catch(err => console.log(err));
+    // }
 
     render() {
         return (
