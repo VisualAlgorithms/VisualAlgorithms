@@ -21,12 +21,25 @@ export default class Navbar extends React.Component {
                             <Link className="nav-link" to='/'>Home</Link>
                             <span className="sr-only">(current)</span>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to='/linkedlist'>Linked List</Link>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Data Structures
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link className="nav-link" to='/linkedlist'>Linked List</Link>
+                            </div>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to='/caesercipher'>Caesar Cipher</Link>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Algorithms
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <Link className="nav-link" to='/caesercipher'>Caesar Cipher</Link>
+                            </div>
                         </li>
+
                         <li className="nav-item">
                             <Link className="nav-link" to='/test'>Test</Link>
                         </li>
