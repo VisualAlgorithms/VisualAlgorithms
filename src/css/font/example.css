@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Caesar Dressing';
+  src: url('Caesar-Dressing.eot'); /* IE9 Compat Modes */
+  src: url('Caesar-Dressing.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Caesar-Dressing.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Caesar-Dressing.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Caesar-Dressing.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Caesar-Dressing.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

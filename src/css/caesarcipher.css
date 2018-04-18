@@ -3,6 +3,10 @@
     padding-bottom: 15px;
 }
 
+.h1{
+    font-family: caesar-dressing ;
+}
+
 .pointer-cursor {
     cursor: pointer;
 }
@@ -26,13 +30,13 @@ pre {
 #p5-canvas {
     min-height: 400px;
 }
-
-/* 
-*@font-face {
-*    font-family: 'caesar';
-*    src: url('webfont.eot'); /* IE9 Compat Modes */
-/*    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-/*        url('webfont.woff') format('woff'), /* Modern Browsers */
-/*         url('o')  format('truetype'), /* Safari, Android, iOS */
-/*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-/*  } */
+ 
+@font-face{
+    font-family: "caesar-dressing";
+    src: url('/font/Caesar-Dressing.eot'); /* IE9 Compat Modes */
+    src: url('/font/Caesar-Dressing.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/font/Caesar-Dressing.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/font/Caesar-Dressing.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/font/Caesar-Dressing.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/font/Caesar-Dressing.svg#Caesar-Dressing.svg') format('svg'); /* Legacy iOS */
+  }

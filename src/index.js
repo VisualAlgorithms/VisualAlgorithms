@@ -5,6 +5,7 @@ import LinkedListComponent from './components/LinkedListComponent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Test from './components/Test';
+import About from './components/About';
 
 ReactDOM.render(
     <HashRouter>
@@ -13,6 +14,7 @@ ReactDOM.render(
             <Route exact path='/linkedlist' component={LinkedListComponent} />
             <Route exact path='/caesarcipher' component={CaesarCipherComponent} />
             <Route exact path='/test' component={Test} />
+            <Route exact path='/about' component={About}/>
         </Switch>
     </HashRouter>,
     document.getElementById('root')

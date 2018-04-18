@@ -5,9 +5,10 @@
 - [x] Fix Chai HTTPS github pages issue. (download source and use webpack?) (using npm and webpack)
 - [ ] Implement methods for Circular Doubly Linked List with a dummy node
 - [ ] Write tests for Circular Doubly Linked List
-- [ ] Find Gaius Julius Caesar font and implement in caesarcipher.html
+- [x] Find Gaius Julius Caesar font.
+- [ ] Implement Gaius Julius Caesar font in caesarcipher.js
 - [x] Ask @mrwatts88 what Extensions he has in Visual Studio Code
-- [ ] Implement About
+- [x] Implement About
 - [x] Move test and caesar cipher into React components
 - [x] Change source code for linked list methods to HTML
 - [x] Find easy way to change source code into usable HTML (Fetching source code from server, and parsing/htmlifying on client)
@@ -24,6 +25,7 @@
 - [ ] Integrate CircleCI for continuous integration
 - [x] Fix "caesar" spelling error in react component
 - [ ] Make sure accordian expand onClick doesn't fire when clicking play button
+- [ ] Make "Accordion" spelled correctly
 - [ ] Store results of doFetch() and parseMethod() so they aren't called so often
 - [x] Integrate github into slack
 - [ ] Make sure Webpapge doesn't sleep on mobile phones https://stackoverflow.com/questions/11529247/in-html5-how-can-i-keep-an-android-device-s-screen-on
