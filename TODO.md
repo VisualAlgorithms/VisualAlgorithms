@@ -1,7 +1,7 @@
 # TODO
 
 - [x] Add more to the TODO List Zach
-- [ ] Add more to the TODo List Matt
+- [ ] Add more to the TODO List Matt
 
 - [ ] Make a Resources Page/dropdown
 - [ ] Favorite books, podcasts, development tools, websites, ect.
@@ -13,7 +13,7 @@
 - [ ] Go through and decide what we really need for Circular Doubly Linked List
 - [ ] Implement methods for Circular Doubly Linked List with a dummy node
 - [ ] Write tests for Circular Doubly Linked List
-- [ ] Implement Gaius Julius Caesar font in caesarcipher.js
+- [ ] Implement Gaius Julius Caesar font in caesarcipher.js (fontfamily not working...)
 - [ ] Add some documentation about the directory structure, setup, tools
 - [ ] Add contributing guidelines
 - [ ] Add linting rules
