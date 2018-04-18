@@ -5,6 +5,7 @@
 
 - [x] Add intro to Circular Doubly Linked List with a dummy node
 - [x] Change Buttons
+- [ ] Email Recommendations form and mailing list!
 - [ ] Find out what favicon.ico is.
 - [ ] Make a Resources Page/dropdown
 - [ ] Favorite books, podcasts, development tools, websites, ect.
