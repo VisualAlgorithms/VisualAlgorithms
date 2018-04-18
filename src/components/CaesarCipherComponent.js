@@ -37,11 +37,10 @@ export default class CaesarCipherComponent extends React.Component {
                     in which each letter in the plaintext is replaced by a letter some fixed number of positions down
                     the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and
                     so on. The method is named after Julius Caesar, who used it in his private correspondence.
-                <br />
                 </p>
                 <div className="float-right">~Wikipedia</div>
                 <p>
-                    <a className="btn btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
+                    <a className="btn btn-dark btn-outline-dark btn-lg" href="https://en.wikipedia.org/wiki/Caesar_cipher" role="button">Learn more »</a>
                 </p>
             </div>
             <PresentationPage fileName='caesarcipher/caesarcipher' ext='cpp' sketch={sketch} methods={this.methods} />

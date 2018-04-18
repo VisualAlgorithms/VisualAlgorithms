@@ -52,6 +52,18 @@ export default class LinkedListComponent extends React.Component {
         return (
             <div>
                 <Navbar />
+                <div className="container-fluid">
+                    <h1 className="display-3">Circular Doubly Linked List</h1>
+                    <p>
+                        A Circular Doubly Linked List is a data structure with the properties of both a doubly linked list and
+                        a circular linked list. Two consecutive elements are linked or connected by "previous" and "next" pointers, 
+                        and the last node points to the first node by the "next" pointer and also the first node points to last node 
+                        by the "previous" pointer.
+                    </p>
+                    <p>
+                        <a className="btn btn-dark btn-outline-dark btn-lg" href="https://en.wikipedia.org/wiki/Doubly_linked_list" role="button">Learn more »</a>
+                    </p>
+                </div>
                 <PresentationPage fileName='linkedlist' ext='js' sketch={sketch} methods={this.methods} />
             </div>
         );

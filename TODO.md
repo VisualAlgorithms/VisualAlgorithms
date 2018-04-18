@@ -3,6 +3,8 @@
 - [x] Add more to the TODO List Zach
 - [ ] Add more to the TODO List Matt
 
+- [x] Add intro to Circular Doubly Linked List with a dummy node
+- [x] Change Buttons
 - [ ] Make a Resources Page/dropdown
 - [ ] Favorite books, podcasts, development tools, websites, ect.
 - [ ] Leetcode solutions Page

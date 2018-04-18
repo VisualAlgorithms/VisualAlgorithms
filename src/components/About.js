@@ -31,7 +31,7 @@ export default class About extends React.Component {
                     </p>
                     <br />
 
-                    <a href="https://github.com/VisualAlgorithms/VisualAlgorithms" className="btn btn-dark" role="button"><i className="fa fa-github"></i></a>
+                    <a href="https://github.com/VisualAlgorithms/VisualAlgorithms" className="btn btn-dark btn-outline-dark btn-lg" role="button"><i className="fa fa-github"></i></a>
 
                 </div>
             </div>
